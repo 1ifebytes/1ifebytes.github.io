@@ -41,9 +41,21 @@ defaultContentLanguage = "zh-cn"
   [params.comments]
     enabled = false
 
-  [params.widgets]
-    homepage = ["search", "archives", "tag-cloud"]
-    page = ["toc"]
+  [[params.widgets.homepage]]
+    type = "search"
+
+  [[params.widgets.homepage]]
+    type = "archives"
+    [params.widgets.homepage.params]
+      limit = 5
+
+  [[params.widgets.homepage]]
+    type = "tag-cloud"
+    [params.widgets.homepage.params]
+      limit = 10
+
+  [[params.widgets.page]]
+    type = "toc"
 
   [params.colorScheme]
     toggle = true
