@@ -33,6 +33,7 @@ defaultContentLanguage = "zh-cn"
     math = false
     toc = true
     readingTime = true
+    headingAnchor = false
 
     [params.article.license]
       enabled = false
