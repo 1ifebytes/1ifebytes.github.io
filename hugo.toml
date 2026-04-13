@@ -1,0 +1,78 @@
+baseURL = "https://1ifebytes.github.io"
+languageCode = "zh-cn"
+title = "Lifebytes"
+theme = "hugo-theme-stack"
+defaultContentLanguage = "zh-cn"
+
+[pagination]
+  pagerSize = 10
+
+[params]
+  mainSections = ["post"]
+  featuredImageField = "image"
+  rssFullContent = true
+  favicon = ""
+
+  [params.footer]
+    since = 2025
+
+  [params.dateFormat]
+    published = "2006-01-02"
+    lastUpdated = "2006-01-02 15:04 MST"
+
+  [params.sidebar]
+    emoji = "💡"
+    subtitle = "记录技术、设计与生活的碎片"
+
+    [params.sidebar.avatar]
+      enabled = true
+      local = true
+      src = "img/avatar.png"
+
+  [params.article]
+    math = false
+    toc = true
+    readingTime = true
+
+    [params.article.license]
+      enabled = false
+
+  [params.comments]
+    enabled = false
+
+  [params.widgets]
+    homepage = ["search", "archives", "tag-cloud"]
+    page = ["toc"]
+
+  [params.colorScheme]
+    toggle = true
+    default = "auto"
+
+[[menu.main]]
+  name = "首页"
+  url = "/"
+  weight = 1
+
+[[menu.main]]
+  name = "归档"
+  url = "/archives/"
+  weight = 2
+
+[[menu.main]]
+  name = "关于"
+  url = "/about/"
+  weight = 3
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+  [markup.tableOfContents]
+    endLevel = 4
+    ordered = true
+    startLevel = 2
+
+  [markup.highlight]
+    noClasses = false
+    style = "github-dark"
